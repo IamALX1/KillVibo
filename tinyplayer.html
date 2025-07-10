@@ -50,7 +50,7 @@
          */
         function getTrackIdFromUrl() {
             const params = new URLSearchParams(window.location.search);
-            const urlTrackID = params.get('trackID');
+            const urlTrackID = params.get('track');
             
             if (urlTrackID) {
                 trackID = urlTrackID;
