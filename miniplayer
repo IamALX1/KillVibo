@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Spotify Player</title>
+    <!-- Using Tailwind CSS for modern styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Using Google Fonts for better typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* The container controls the responsive width of the player. */
+        /* It will take up 100% of the available width up to a maximum of 400px. */
+        .spotify-container {
+            width: 100%;
+            max-width: 400px;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white flex items-center justify-center min-h-screen p-4">
+
+    <div class="w-full max-w-sm p-6 bg-gray-800 rounded-xl shadow-lg text-center">
+        <h1 class="text-2xl font-bold mb-2">Responsive Spotify Player</h1>
+        <p class="text-gray-400 mb-6">This player loads a track from the URL. Add <code class="bg-gray-700 p-1 rounded-md text-sm">?track=YOUR_ID_HERE</code> to the end of the URL to change the song.</p>
+
+        <!--
+          Spotify Player Container
+          This div makes the player responsive. It's set to be 100% wide
+          of its parent, with a max-width of 400px.
+        -->
+        <div class="spotify-container mx-auto">
+            <!--
+              Spotify iFrame
+              - The `src` is set by the JavaScript below.
+              - The height is set to 200px. Note that Spotify's player
+                has standard heights, so a custom height might result in letterboxing.
+              - The width is 100% to fill the container, making it responsive.
+            -->
+            <iframe
+                id="spotify-player"
+                style="border-radius:12px"
+                src=""
+                width="100%"
+                height="200"
+                frameBorder="0"
+                allowfullscreen=""
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy">
+            </iframe>
+        </div>
+    </div>
+
+    <script>
+        // --- How to use this player ---
+        // This script reads a 'track' parameter from the page's URL.
+        // To change the song, add "?track=YOUR_TRACK_ID" to the end of the URL.
+        // Example: your-page.html?track=3G8I2T222A1j0rVCIaL6i6
+
+        // 1. Get the URL's query parameters.
+        const urlParams = new URLSearchParams(window.location.search);
+
+        // 2. Get the 'track' parameter from the URL.
+        // If it doesn't exist, use a default Track ID as a fallback.
+        const TrackID = urlParams.get('track') || '4cOdK2wGLETOMs3AKxb4Vn'; // Default: "Blinding Lights"
+
+        // 3. Get the iframe element from the HTML.
+        const spotifyPlayer = document.getElementById('spotify-player');
+
+        // 4. Set the iframe's src attribute using the determined TrackID.
+        if (TrackID) {
+            spotifyPlayer.src = `https://open.spotify.com/embed/track/${TrackID}`;
+        }
+    </script>
+
+</body>
+</html>
