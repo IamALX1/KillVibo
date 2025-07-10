@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Player Button</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Ensures the button is centered in the view */
+        body, html {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            margin: 0;
+            background-color: transparent; /* Makes the background transparent for embedding */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- The Play/Pause Button -->
+    <button id="playButton" style="width: 100px; height: 100px;" class="bg-green-500 text-white rounded-full flex items-center justify-center shadow-lg transform transition-transform duration-200 hover:scale-110 focus:outline-none">
+        <!-- Play Icon -->
+        <svg id="playIcon" class="w-10 h-10 ml-1" viewBox="0 0 20 20" fill="currentColor">
+            <path d="M4.018 15.592A.998.998 0 005 16h10a1 1 0 00.982-1.408L9.982 4.408A1 1 0 008.018 4.408L4.018 15.592z" transform="rotate(90 10 10)"></path>
+        </svg>
+        <!-- Pause Icon (hidden by default) -->
+        <svg id="pauseIcon" class="w-10 h-10 hidden" viewBox="0 0 20 20" fill="currentColor">
+            <path d="M5 4h3v12H5V4zm7 0h3v12h-3V4z"></path>
+        </svg>
+    </button>
+
+    <!-- This div will hold the invisible Spotify player -->
+    <div id="player-container" class="hidden"></div>
+
+    <script>
+        // --- DOM Elements ---
+        const playButton = document.getElementById('playButton');
+        const playIcon = document.getElementById('playIcon');
+        const pauseIcon = document.getElementById('pauseIcon');
+        const playerContainer = document.getElementById('player-container');
+
+        let isPlaying = false;
+        let trackID = null;
+
+        /**
+         * Reads the track ID from the URL query parameter.
+         * If no trackID is found, it defaults to the "Jeopardy Theme".
+         */
+        function getTrackIdFromUrl() {
+            const params = new URLSearchParams(window.location.search);
+            const urlTrackID = params.get('trackID');
+            
+            if (urlTrackID) {
+                trackID = urlTrackID;
+            } else {
+                console.log("No trackID found in URL. Using default track.");
+                // Spotify Track ID for "Jeopardy Theme"
+                trackID = '2o2a9F2nSma8iA36g1YwB4'; 
+            }
+        }
+
+        /**
+         * Toggles the music playback.
+         */
+        function togglePlayback() {
+            if (!trackID) {
+                console.error("Cannot play: No trackID specified or defaulted.");
+                return;
+            }
+
+            isPlaying = !isPlaying;
+
+            if (isPlaying) {
+                // Create and play the track
+                const iframe = document.createElement('iframe');
+                iframe.style.display = 'none'; // Keep it invisible
+                iframe.width = "1";
+                iframe.height = "1";
+                iframe.src = `https://open.spotify.com/embed/track/${trackID}?utm_source=generator&autoplay=1`;
+                iframe.allow = "autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture";
+                iframe.loading = "lazy";
+                
+                // When the iframe loads, if it fails (e.g., bad track ID), stop playback
+                iframe.onerror = () => {
+                    console.error("Error loading Spotify iframe. Check track ID.");
+                    stopPlayback();
+                };
+                
+                playerContainer.innerHTML = ''; // Clear any old player
+                playerContainer.appendChild(iframe);
+
+                // Update button UI
+                playIcon.classList.add('hidden');
+                pauseIcon.classList.remove('hidden');
+                playButton.classList.remove('bg-green-500');
+                playButton.classList.add('bg-red-500');
+
+            } else {
+                // Stop playback
+                stopPlayback();
+            }
+        }
+
+        /**
+         * Stops playback and resets the UI.
+         */
+        function stopPlayback() {
+            playerContainer.innerHTML = ''; // Remove the iframe to stop the music
+            isPlaying = false;
+            
+            // Update button UI
+            playIcon.classList.remove('hidden');
+            pauseIcon.classList.add('hidden');
+            playButton.classList.remove('bg-red-500');
+            playButton.classList.add('bg-green-500');
+        }
+
+        // --- Event Listeners ---
+        playButton.addEventListener('click', togglePlayback);
+        
+        // Initialize the component on load
+        window.addEventListener('load', getTrackIdFromUrl);
+
+    </script>
+</body>
+</html>
