@@ -11,7 +11,7 @@
     /* Scoping styles to the component to avoid conflicts */
     #spotify-search-container {
         font-family: 'Inter', sans-serif;
-        background-color: #191414; /* Spotify TEST TEST Black */
+        background-color: #191414; /* Spotify Black */
         color: #FFFFFF;
     }
     #spotify-search-container ::-webkit-scrollbar { width: 8px; }
@@ -44,7 +44,7 @@
         <svg role="img" class="h-8 w-8 sm:h-10 sm:w-10 mx-auto mb-4 text-white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Spotify</title><path fill="#1DB954" d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm6.825 17.54c-.23.36-.69.48-1.05.25-2.7-1.66-6.25-2.05-10.4-1.15-.42.1-.84-.13-1.04-.54-.2-.41.13-.84.54-1.04 4.5-1 8.35-.55 11.35 1.35.36.22.48.69.25 1.05zm1.2-2.7c-.28.45-.88.6-1.33.32-3.15-1.95-7.6-2.5-12.25-1.35-.53.15-1.08-.18-1.23-.7-.15-.53.18-1.08.7-1.23C14.35 9.9 19.2 10.5 22.75 12.7c.45.28.6.88.32 1.33zm.1-3.2c-3.75-2.15-9.8-2.4-14.4-1.25-.6.15-1.2-.2-1.35-.8-.15-.6.2-1.2.8-1.35C11.25 4.9 17.9 5.2 22.1 7.6c.55.3.7 1 .4 1.55-.3.55-1 .7-1.55.4z"/></svg>
         
         <h1 class="text-xl sm:text-2xl md:text-3xl font-bold text-center text-white mb-6">
-            KillVibo Deployment V1 Beta
+            Project: KillVibo <br> [Beta 1.3 Deployment]
         </h1>
 
         <!-- Search Controls -->
@@ -319,6 +319,7 @@
             const params = new URLSearchParams(window.location.search);
             return {
                 userID: params.get('userID'),
+                userEmail: params.get('userEmail'),
                 rowID: params.get('rowID')
             };
         }
@@ -345,14 +346,15 @@
                 if (addButton.disabled) return; // Prevent multiple clicks
 
                 const userInfo = getUserInfo();
-                const webhookUrl = 'https://go.glideapps.com/api/container/plugin/webhook-trigger/8MNYA21VKEtcJUen7n3V/984759b0-2bf1-41ae-ba96-064d2c990a17';
+                const webhookUrl = 'https://go.glideapps.com/api/container/plugin/webhook-trigger/HA0F8RNgNXbk4m4rls9b/5f4c7893-9e7d-4857-8f13-27013bc090da';
                 const payload = {
                     'Name': decodeURIComponent(addButton.dataset.trackName),
                     'Artist': decodeURIComponent(addButton.dataset.artists),
                     'URL': decodeURIComponent(addButton.dataset.songUrl),
-                    'Album Art': decodeURIComponent(addButton.dataset.albumArtUrl),
+                    'AlbumArt': decodeURIComponent(addButton.dataset.albumArtUrl), // <-- FIX: Removed space from key
                     'BPM': Number(addButton.dataset.bpm),
                     'UserID': userInfo.userID,
+                    'UserEmail': userInfo.userEmail,
                     'RowID': userInfo.rowID
                 };
 
