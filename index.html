@@ -1,445 +1,390 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2487.7">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #6d6d6d; -webkit-text-stroke: #6d6d6d}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #6b0001; -webkit-text-stroke: #6b0001}
-    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #fb0007; -webkit-text-stroke: #fb0007}
-    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #0000ff; -webkit-text-stroke: #0000ff}
-    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; -webkit-text-stroke: #000000}
-    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #4d5055; -webkit-text-stroke: #4d5055}
-    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; -webkit-text-stroke: #000000; min-height: 16.0px}
-    p.p8 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #18702b; -webkit-text-stroke: #18702b}
-    p.p9 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #093c94; -webkit-text-stroke: #093c94}
-    span.s1 {font-kerning: none; background-color: #ecf1f7}
-    span.s2 {font-kerning: none; color: #fb0007; background-color: #ecf1f7; -webkit-text-stroke: 0px #fb0007}
-    span.s3 {font-kerning: none; color: #2a2a2a; background-color: #ecf1f7; -webkit-text-stroke: 0px #2a2a2a}
-    span.s4 {font-kerning: none; color: #000000; background-color: #ecf1f7; -webkit-text-stroke: 0px #000000}
-    span.s5 {font-kerning: none; color: #0000ff; background-color: #ecf1f7; -webkit-text-stroke: 0px #0000ff}
-    span.s6 {font-kerning: none; color: #6b0001; background-color: #ecf1f7; -webkit-text-stroke: 0px #6b0001}
-    span.s7 {font-kerning: none; color: #18702b; background-color: #ecf1f7; -webkit-text-stroke: 0px #18702b}
-    span.s8 {font-kerning: none; color: #093c94; background-color: #ecf1f7; -webkit-text-stroke: 0px #093c94}
-    span.s9 {font-kerning: none; color: #137646; background-color: #ecf1f7; -webkit-text-stroke: 0px #137646}
-    span.s10 {font-kerning: none}
-    span.s11 {font-kerning: none; color: #6f0ec3; background-color: #ecf1f7; -webkit-text-stroke: 0px #6f0ec3}
-    span.s12 {font-kerning: none; color: #a4450b; background-color: #ecf1f7; -webkit-text-stroke: 0px #a4450b}
-    span.s13 {font-kerning: none; color: #0e6e6d; background-color: #ecf1f7; -webkit-text-stroke: 0px #0e6e6d}
-    span.s14 {font-kerning: none; color: #4d5055; background-color: #ecf1f7; -webkit-text-stroke: 0px #4d5055}
-  </style>
-</head>
-<body>
-<p class="p1"><span class="s1">&lt;!DOCTYPE</span><span class="s2"> html</span><span class="s1">&gt;</span></p>
-<p class="p2"><span class="s3">&lt;</span><span class="s1">html</span><span class="s4"> </span><span class="s2">lang</span><span class="s3">=</span><span class="s5">"en"</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s3">&lt;</span><span class="s1">head</span><span class="s3">&gt;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">meta</span><span class="s4"> </span><span class="s1">charset</span><span class="s3">=</span><span class="s5">"UTF-8"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">meta</span><span class="s4"> </span><span class="s2">name</span><span class="s3">=</span><span class="s1">"viewport"</span><span class="s4"> </span><span class="s2">content</span><span class="s3">=</span><span class="s1">"width=device-width, initial-scale=1.0"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">title</span><span class="s3">&gt;</span><span class="s1">Spotify Song Search</span><span class="s3">&lt;/</span><span class="s6">title</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;!-- Required Styles and Fonts --&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">link</span><span class="s4"> </span><span class="s2">href</span><span class="s3">=</span><span class="s1">"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"</span><span class="s4"> </span><span class="s2">rel</span><span class="s3">=</span><span class="s1">"stylesheet"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">script</span><span class="s4"> </span><span class="s2">src</span><span class="s3">=</span><span class="s1">"https://cdn.tailwindcss.com"</span><span class="s3">&gt;&lt;/</span><span class="s6">script</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s1">style</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s6">body</span><span class="s1"> {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">font-family:</span><span class="s1"> </span><span class="s7">'Inter'</span><span class="s1">, </span><span class="s8">sans-serif</span><span class="s1">;</span></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s2">background-color:</span><span class="s4"> </span><span class="s8">#191414</span><span class="s4">; </span><span class="s1">/* Spotify Black */</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">color:</span><span class="s1"> </span><span class="s8">#FFFFFF</span><span class="s1">;</span></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s1">/* Add padding to the body for spacing */</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">padding:</span><span class="s1"> </span><span class="s9">1rem</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>@</span><span class="s6">media</span><span class="s1"> (</span><span class="s6">min-width:</span><span class="s1"> 640</span><span class="s6">px</span><span class="s1">) {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>body {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s2">padding:</span><span class="s1"> </span><span class="s9">1.5rem</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>@</span><span class="s6">media</span><span class="s1"> (</span><span class="s6">min-width:</span><span class="s1"> 768</span><span class="s6">px</span><span class="s1">) {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>body {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s2">padding:</span><span class="s1"> </span><span class="s9">2rem</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p2"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">::-webkit-scrollbar</span><span class="s4"> { </span><span class="s2">width:</span><span class="s4"> </span><span class="s9">8px</span><span class="s4">; }</span></p>
-<p class="p2"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">::-webkit-scrollbar-track</span><span class="s4"> { </span><span class="s2">background:</span><span class="s4"> </span><span class="s8">#282828</span><span class="s4">; }</span></p>
-<p class="p2"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">::-webkit-scrollbar-thumb</span><span class="s4"> { </span><span class="s2">background:</span><span class="s4"> </span><span class="s8">#535353</span><span class="s4">; </span><span class="s2">border-radius:</span><span class="s4"> </span><span class="s9">10px</span><span class="s4">; }</span></p>
-<p class="p2"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">::-webkit-scrollbar-thumb:hover</span><span class="s4"> { </span><span class="s2">background:</span><span class="s4"> </span><span class="s8">#737373</span><span class="s4">; }</span></p>
-<p class="p7"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s6">select</span><span class="s1"> {</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s1">-webkit-appearance:</span><span class="s4"> </span><span class="s8">none</span><span class="s4">;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s1">-moz-appearance:</span><span class="s4"> </span><span class="s8">none</span><span class="s4">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">appearance:</span><span class="s1"> </span><span class="s8">none</span><span class="s1">;</span></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s2">background-image:</span><span class="s4"> </span><span class="s8">url</span><span class="s4">(</span><span class="s1">'data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23FFFFFF%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-13%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2013l128%20127.9c3.6%203.6%207.8%205.4%2013%205.4s9.4-1.8%2013-5.4L287%2095.2c3.6-3.7%205.4-8%205.4-13%200-4.9-1.8-9.2-5.4-12.8z%22%2F%3E%3C%2Fsvg%3E'</span><span class="s4">);</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s1">background-repeat:</span><span class="s4"> </span><span class="s8">no-repeat</span><span class="s4">;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s1">background-position:</span><span class="s4"> </span><span class="s8">right</span><span class="s4"> </span><span class="s9">0.7rem</span><span class="s4"> </span><span class="s8">center</span><span class="s4">;</span></p>
-<p class="p3"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s1">background-size:</span><span class="s4"> </span><span class="s9">0.65rem</span><span class="s4"> </span><span class="s8">auto</span><span class="s4">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p2"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">.player-container</span><span class="s4"> {</span></p>
-<p class="p9"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s2">transition:</span><span class="s4"> </span><span class="s1">max-height</span><span class="s4"> </span><span class="s9">0.5s</span><span class="s4"> </span><span class="s1">ease-in-out</span><span class="s4">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">max-height:</span><span class="s1"> </span><span class="s9">0</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">overflow:</span><span class="s1"> </span><span class="s8">hidden</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p2"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">.player-container.is-open</span><span class="s4"> {</span></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s2">max-height:</span><span class="s4"> </span><span class="s9">100px</span><span class="s4">; </span><span class="s1">/* Enough height for the compact player */</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p2"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s1">style</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s3">&lt;/</span><span class="s1">head</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s3">&lt;</span><span class="s1">body</span><span class="s3">&gt;</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;!-- Main Component HTML --&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"spotify-search-container"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-full max-w-3xl mx-auto bg-[#282828] rounded-2xl shadow-2xl shadow-black/30 overflow-hidden"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"p-4 sm:p-6 md:p-8"</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s1">&lt;!-- Spotify Logo --&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">svg</span><span class="s4"> </span><span class="s2">role</span><span class="s3">=</span><span class="s1">"img"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"h-8 w-8 sm:h-10 sm:w-10 mx-auto mb-4 text-white"</span><span class="s4"> </span><span class="s2">viewBox</span><span class="s3">=</span><span class="s1">"0 0 24 24"</span><span class="s4"> </span><span class="s2">xmlns</span><span class="s3">=</span><span class="s1">"http://www.w3.org/2000/svg"</span><span class="s3">&gt;&lt;</span><span class="s6">title</span><span class="s3">&gt;</span><span class="s4">Spotify</span><span class="s3">&lt;/</span><span class="s6">title</span><span class="s3">&gt;&lt;</span><span class="s6">path</span><span class="s4"> </span><span class="s2">fill</span><span class="s3">=</span><span class="s1">"#1DB954"</span><span class="s4"> </span><span class="s2">d</span><span class="s3">=</span><span class="s1">"M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm6.825 17.54c-.23.36-.69.48-1.05.25-2.7-1.66-6.25-2.05-10.4-1.15-.42.1-.84-.13-1.04-.54-.2-.41.13-.84.54-1.04 4.5-1 8.35-.55 11.35 1.35.36.22.48.69.25 1.05zm1.2-2.7c-.28.45-.88.6-1.33.32-3.15-1.95-7.6-2.5-12.25-1.35-.53.15-1.08-.18-1.23-.7-.15-.53.18-1.08.7-1.23C14.35 9.9 19.2 10.5 22.75 12.7c.45.28.6.88.32 1.33zm.1-3.2c-3.75-2.15-9.8-2.4-14.4-1.25-.6.15-1.2-.2-1.35-.8-.15-.6.2-1.2.8-1.35C11.25 4.9 17.9 5.2 22.1 7.6c.55.3.7 1 .4 1.55-.3.55-1 .7-1.55.4z"</span><span class="s3">/&gt;&lt;/</span><span class="s6">svg</span><span class="s3">&gt;</span></p>
-<p class="p7"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">h1</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"text-xl sm:text-2xl md:text-3xl font-bold text-center text-white mb-6"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>Song Search</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s6">h1</span><span class="s3">&gt;</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s1">&lt;!-- Search Controls --&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"flex flex-col sm:flex-row items-center gap-2 sm:gap-4"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"relative flex-grow w-full"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">input</span><span class="s4"> </span><span class="s2">type</span><span class="s3">=</span><span class="s1">"text"</span><span class="s4"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"searchInput"</span><span class="s4"> </span><span class="s2">placeholder</span><span class="s3">=</span><span class="s1">"Enter a song name..."</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-full text-sm sm:text-base pl-10 sm:pl-12 pr-4 py-3 bg-[#333333] border-2 border-[#535353] rounded-xl focus:ring-2 focus:ring-[#1DB954] focus:border-[#1DB954] focus:outline-none transition duration-300 placeholder-gray-400"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">svg</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"absolute left-3 sm:left-4 top-1/2 -translate-y-1/2 w-5 h-5 sm:w-6 sm:h-6 text-gray-400"</span><span class="s4"> </span><span class="s2">xmlns</span><span class="s3">=</span><span class="s1">"http://www.w3.org/2000/svg"</span><span class="s4"> </span><span class="s2">fill</span><span class="s3">=</span><span class="s1">"none"</span><span class="s4"> </span><span class="s2">viewBox</span><span class="s3">=</span><span class="s1">"0 0 24 24"</span><span class="s4"> </span><span class="s2">stroke</span><span class="s3">=</span><span class="s1">"currentColor"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">path</span><span class="s4"> </span><span class="s2">stroke-linecap</span><span class="s3">=</span><span class="s1">"round"</span><span class="s4"> </span><span class="s2">stroke-linejoin</span><span class="s3">=</span><span class="s1">"round"</span><span class="s4"> </span><span class="s2">stroke-width</span><span class="s3">=</span><span class="s1">"2"</span><span class="s4"> </span><span class="s2">d</span><span class="s3">=</span><span class="s1">"M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"</span><span class="s4"> </span><span class="s3">/&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s6">svg</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"flex-shrink-0 w-full sm:w-auto"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;</span><span class="s6">select</span><span class="s4"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"resultsCount"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"w-full h-full text-sm sm:text-base px-4 py-3 bg-[#333333] border-2 border-[#535353] rounded-xl focus:ring-2 focus:ring-[#1DB954] focus:border-[#1DB954] focus:outline-none transition duration-300"</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">option</span><span class="s1"> </span><span class="s2">value</span><span class="s3">=</span><span class="s5">"5"</span><span class="s3">&gt;</span><span class="s1">5 Results</span><span class="s3">&lt;/</span><span class="s6">option</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">option</span><span class="s1"> </span><span class="s2">value</span><span class="s3">=</span><span class="s5">"10"</span><span class="s1"> </span><span class="s2">selected</span><span class="s3">&gt;</span><span class="s1">10 Results</span><span class="s3">&lt;/</span><span class="s6">option</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">option</span><span class="s1"> </span><span class="s2">value</span><span class="s3">=</span><span class="s5">"15"</span><span class="s3">&gt;</span><span class="s1">15 Results</span><span class="s3">&lt;/</span><span class="s6">option</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">option</span><span class="s1"> </span><span class="s2">value</span><span class="s3">=</span><span class="s5">"20"</span><span class="s3">&gt;</span><span class="s1">20 Results</span><span class="s3">&lt;/</span><span class="s6">option</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s3">&lt;</span><span class="s6">option</span><span class="s1"> </span><span class="s2">value</span><span class="s3">=</span><span class="s5">"25"</span><span class="s3">&gt;</span><span class="s1">25 Results</span><span class="s3">&lt;/</span><span class="s6">option</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s3">&lt;/</span><span class="s6">select</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">&lt;!-- Results Container --&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"results"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"px-2 pb-4"</span><span class="s3">&gt;</span></p>
-<p class="p4"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">id</span><span class="s3">=</span><span class="s1">"loader"</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"hidden justify-center items-center p-8"</span><span class="s3">&gt;&lt;</span><span class="s6">div</span><span class="s4"> </span><span class="s2">class</span><span class="s3">=</span><span class="s1">"animate-spin rounded-full h-12 w-12 border-b-2 border-[#1DB954]"</span><span class="s3">&gt;&lt;/</span><span class="s6">div</span><span class="s3">&gt;&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s1"> </span><span class="s2">id</span><span class="s3">=</span><span class="s5">"no-results"</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"hidden text-center p-8 text-gray-400"</span><span class="s3">&gt;&lt;</span><span class="s6">p</span><span class="s3">&gt;</span><span class="s1">No results found. Try another search.</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s3">&lt;</span><span class="s6">div</span><span class="s1"> </span><span class="s2">id</span><span class="s3">=</span><span class="s5">"initial-message"</span><span class="s1"> </span><span class="s2">class</span><span class="s3">=</span><span class="s5">"text-center p-8 text-gray-400"</span><span class="s3">&gt;&lt;</span><span class="s6">p</span><span class="s3">&gt;</span><span class="s1">Your search results will appear here.</span><span class="s3">&lt;/</span><span class="s6">p</span><span class="s3">&gt;&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s6">div</span><span class="s3">&gt;</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;!-- Main Component Script --&gt;</span></p>
-<p class="p2"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;</span><span class="s1">script</span><span class="s3">&gt;</span></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">        </span></span><span class="s1">// Self-invoking function to encapsulate the script and avoid global scope conflicts</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">        </span>(</span><span class="s11">function</span><span class="s1">() {</span></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s1">// --- Spotify API Credentials ---</span></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s11">const</span><span class="s4"> clientId = </span><span class="s1">'65b6fcd844db4cb2804723a8f4379eb7'</span><span class="s4">;</span></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s11">const</span><span class="s4"> clientSecret = </span><span class="s1">'ee49545485ba402f87166553e242da14'</span><span class="s4">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s11">let</span><span class="s1"> accessToken = </span><span class="s11">null</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s11">let</span><span class="s1"> tokenExpirationTime = </span><span class="s12">0</span><span class="s1">;</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s1">// --- DOM Elements ---</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s11">const</span><span class="s1"> searchContainer = document.getElementById(</span><span class="s7">'spotify-search-container'</span><span class="s1">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s11">const</span><span class="s1"> searchInput = searchContainer.querySelector(</span><span class="s7">'#searchInput'</span><span class="s1">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s11">const</span><span class="s1"> resultsCount = searchContainer.querySelector(</span><span class="s7">'#resultsCount'</span><span class="s1">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s11">const</span><span class="s1"> resultsContainer = searchContainer.querySelector(</span><span class="s7">'#results'</span><span class="s1">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s11">const</span><span class="s1"> loader = searchContainer.querySelector(</span><span class="s7">'#loader'</span><span class="s1">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s11">const</span><span class="s1"> noResultsMessage = searchContainer.querySelector(</span><span class="s7">'#no-results'</span><span class="s1">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s11">const</span><span class="s1"> initialMessage = searchContainer.querySelector(</span><span class="s7">'#initial-message'</span><span class="s1">);</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s11">let</span><span class="s1"> searchTimeout;</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s1">/** Fetches a new access token from the Spotify API. */</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s11">async</span><span class="s1"> </span><span class="s11">function</span><span class="s1"> getAccessToken() {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s11">if</span><span class="s1"> (accessToken &amp;&amp; </span><span class="s13">Date</span><span class="s1">.now() &lt; tokenExpirationTime) </span><span class="s11">return</span><span class="s1"> accessToken;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s11">try</span><span class="s1"> {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s11">const</span><span class="s1"> response = </span><span class="s11">await</span><span class="s1"> fetch(</span><span class="s7">'https://accounts.spotify.com/api/token'</span><span class="s1">, {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span>method: </span><span class="s7">'POST'</span><span class="s1">,</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span>headers: {</span></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s1">'Content-Type'</span><span class="s4">: </span><span class="s1">'application/x-www-form-urlencoded'</span><span class="s4">,</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s7">'Authorization'</span><span class="s1">: </span><span class="s7">'Basic '</span><span class="s1"> + btoa(clientId + </span><span class="s7">':'</span><span class="s1"> + clientSecret)</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span>},</span></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">                        </span>body: </span><span class="s1">'grant_type=client_credentials'</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>});</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s11">if</span><span class="s1"> (!response.ok) </span><span class="s11">throw</span><span class="s1"> </span><span class="s11">new</span><span class="s1"> </span><span class="s13">Error</span><span class="s1">(</span><span class="s7">`Token fetch failed: </span><span class="s1">${response.statusText}</span><span class="s7">`</span><span class="s1">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s11">const</span><span class="s1"> data = </span><span class="s11">await</span><span class="s1"> response.json();</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>accessToken = data.access_token;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>tokenExpirationTime = </span><span class="s13">Date</span><span class="s1">.now() + (data.expires_in - </span><span class="s12">60</span><span class="s1">) * </span><span class="s12">1000</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s11">return</span><span class="s1"> accessToken;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>} </span><span class="s11">catch</span><span class="s1"> (error) {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>console.error(</span><span class="s7">"Error fetching Spotify access token:"</span><span class="s1">, error);</span></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">                    </span>resultsContainer.innerHTML = </span><span class="s1">`&lt;p class="text-center text-red-400 p-4"&gt;Could not connect to Spotify.&lt;/p&gt;`</span><span class="s4">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s11">return</span><span class="s1"> </span><span class="s11">null</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>}</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s1">/** Searches for tracks and their audio features on Spotify. */</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s11">async</span><span class="s1"> </span><span class="s11">function</span><span class="s1"> searchSongs() {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s11">const</span><span class="s1"> query = searchInput.value;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s11">if</span><span class="s1"> (!query.trim()) {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>clearResults(</span><span class="s11">true</span><span class="s1">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s11">return</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>}</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>clearResults();</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>loader.style.display = </span><span class="s7">'flex'</span><span class="s1">;</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s11">const</span><span class="s1"> token = </span><span class="s11">await</span><span class="s1"> getAccessToken();</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s11">if</span><span class="s1"> (!token) {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>loader.style.display = </span><span class="s7">'none'</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s11">return</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>}</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s11">try</span><span class="s1"> {</span></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s1">// Step 1: Search for tracks</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s11">const</span><span class="s1"> limit = resultsCount.value;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s11">const</span><span class="s1"> searchUrl = </span><span class="s7">`https://api.spotify.com/v1/search?q=</span><span class="s1">${encodeURIComponent(query)}</span><span class="s7">&amp;type=track&amp;limit=</span><span class="s1">${limit}</span><span class="s7">`</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s11">const</span><span class="s1"> searchResponse = </span><span class="s11">await</span><span class="s1"> fetch(searchUrl, { headers: { </span><span class="s7">'Authorization'</span><span class="s1">: </span><span class="s7">`Bearer </span><span class="s1">${token}</span><span class="s7">`</span><span class="s1"> } });</span></p>
-<p class="p7"><span class="s1"><span class="Apple-converted-space">                    </span></span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s11">if</span><span class="s1"> (searchResponse.status === </span><span class="s12">401</span><span class="s1">) {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span>accessToken = </span><span class="s11">null</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span>console.log(</span><span class="s7">"Token expired on search, retrying..."</span><span class="s1">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span>searchSongs(); </span><span class="s14">// Retry the whole function</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s11">return</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>}</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s11">if</span><span class="s1"> (!searchResponse.ok) </span><span class="s11">throw</span><span class="s1"> </span><span class="s11">new</span><span class="s1"> </span><span class="s13">Error</span><span class="s1">(</span><span class="s7">`Search API error: </span><span class="s1">${searchResponse.statusText}</span><span class="s7">`</span><span class="s1">);</span></p>
-<p class="p7"><span class="s1"><span class="Apple-converted-space">                    </span></span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s11">const</span><span class="s1"> searchData = </span><span class="s11">await</span><span class="s1"> searchResponse.json();</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s11">const</span><span class="s1"> tracks = searchData.tracks.items;</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s11">if</span><span class="s1"> (!tracks || tracks.length === </span><span class="s12">0</span><span class="s1">) {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span>displayResults([]);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s11">return</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>}</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s1">// Step 2: Get audio features (BPM)</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s11">let</span><span class="s1"> combinedData;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s11">try</span><span class="s1"> {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s11">const</span><span class="s1"> trackIds = tracks.map(track =&gt; track &amp;&amp; track.id).filter(</span><span class="s13">Boolean</span><span class="s1">).join(</span><span class="s7">','</span><span class="s1">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s11">if</span><span class="s1"> (trackIds) {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s11">const</span><span class="s1"> featuresUrl = </span><span class="s7">`https://api.spotify.com/v1/audio-features?ids=</span><span class="s1">${trackIds}</span><span class="s7">`</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s11">const</span><span class="s1"> featuresResponse = </span><span class="s11">await</span><span class="s1"> fetch(featuresUrl, { headers: { </span><span class="s7">'Authorization'</span><span class="s1">: </span><span class="s7">`Bearer </span><span class="s1">${token}</span><span class="s7">`</span><span class="s1"> } });</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s11">if</span><span class="s1"> (featuresResponse.status === </span><span class="s12">401</span><span class="s1">) {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                </span>accessToken = </span><span class="s11">null</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                </span>console.log(</span><span class="s7">"Token expired on features fetch, retrying..."</span><span class="s1">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                </span>searchSongs();</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s11">return</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span>}</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s11">if</span><span class="s1"> (!featuresResponse.ok) {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s11">throw</span><span class="s1"> </span><span class="s11">new</span><span class="s1"> </span><span class="s13">Error</span><span class="s1">(</span><span class="s7">`Features API error: Status </span><span class="s1">${featuresResponse.status}</span><span class="s7">`</span><span class="s1">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span>}</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s11">const</span><span class="s1"> featuresData = </span><span class="s11">await</span><span class="s1"> featuresResponse.json();</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s11">const</span><span class="s1"> audioFeaturesMap = </span><span class="s11">new</span><span class="s1"> </span><span class="s13">Map</span><span class="s1">(featuresData.audio_features.map(f =&gt; f &amp;&amp; [f.id, f]).filter(</span><span class="s13">Boolean</span><span class="s1">));</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span>combinedData = tracks.map(track =&gt; ({</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                </span>...track,</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                </span>bpm: (audioFeaturesMap.</span><span class="s11">get</span><span class="s1">(track.id)?.tempo || </span><span class="s12">0</span><span class="s1">)</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span>}));</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span>} </span><span class="s11">else</span><span class="s1"> {</span></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s1">// If no track IDs, just set bpm to 0</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span>combinedData = tracks.map(t =&gt; ({...t, bpm: </span><span class="s12">0</span><span class="s1">}));</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span>}</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>} </span><span class="s11">catch</span><span class="s1"> (featuresError) {</span></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">                        </span></span><span class="s1">// If fetching features fails for any reason (like 403), log it and proceed without BPM</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span>console.warn(</span><span class="s7">"Could not fetch audio features:"</span><span class="s1">, featuresError.message);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span>console.warn(</span><span class="s7">"Displaying results without BPM data."</span><span class="s1">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span>combinedData = tracks.map(t =&gt; ({...t, bpm: </span><span class="s12">0</span><span class="s1">}));</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>}</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>displayResults(combinedData);</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>} </span><span class="s11">catch</span><span class="s1"> (error) {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>console.error(</span><span class="s7">"Error during Spotify search:"</span><span class="s1">, error);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>loader.style.display = </span><span class="s7">'none'</span><span class="s1">;</span></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">                    </span>resultsContainer.innerHTML = </span><span class="s1">`&lt;p class="text-center text-red-400 p-4"&gt;An error occurred. Please try again.&lt;/p&gt;`</span><span class="s4">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>}</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s1">/** Renders the search results in the DOM. */</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s11">function</span><span class="s1"> displayResults(tracks) {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>clearResults();</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s11">if</span><span class="s1"> (!tracks || tracks.length === </span><span class="s12">0</span><span class="s1">) {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>noResultsMessage.style.display = </span><span class="s7">'block'</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s11">return</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>}</span></p>
-<p class="p7"><span class="s1"><span class="Apple-converted-space">                </span></span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>tracks.sort((a, b) =&gt; b.popularity - a.popularity);</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>tracks.forEach(track =&gt; {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s11">const</span><span class="s1"> artists = track.artists.map(artist =&gt; artist.name).join(</span><span class="s7">', '</span><span class="s1">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s11">const</span><span class="s1"> albumArtUrl = track.album.images.length ? track.album.images[</span><span class="s12">0</span><span class="s1">].url : </span><span class="s7">'https://placehold.co/48x48/282828/737373?text=N/A'</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s11">const</span><span class="s1"> songUrl = track.external_urls.spotify;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s11">const</span><span class="s1"> bpm = </span><span class="s13">Math</span><span class="s1">.round(track.bpm);</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s11">const</span><span class="s1"> resultElement = document.createElement(</span><span class="s7">'div'</span><span class="s1">);</span></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">                    </span>resultElement.className = </span><span class="s1">'result-item p-3 mx-2 mb-2 bg-[#333333]/60 rounded-lg transition-all duration-300'</span><span class="s4">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>resultElement.innerHTML = </span><span class="s7">`</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;div class="flex items-center gap-4"&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;img src="</span><span class="s4">${albumArtUrl}</span><span class="s1">" class="w-10 h-10 sm:w-12 sm:h-12 rounded-md flex-shrink-0" alt="</span><span class="s4">${track.album.name}</span><span class="s1">" onerror="this.src='https://placehold.co/48x48/282828/737373?text=N/A'"&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;div class="min-w-0 flex-grow"&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                                </span>&lt;p class="font-bold truncate text-sm sm:text-base text-white"&gt;</span><span class="s4">${track.name}</span><span class="s1">&lt;/p&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                                </span>&lt;div class="flex items-center gap-x-2"&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                                    </span>&lt;p class="text-xs sm:text-sm text-gray-400 truncate"&gt;</span><span class="s4">${artists}</span><span class="s1">&lt;/p&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                                    </span>&lt;p class="text-xs sm:text-sm text-gray-400 flex-shrink-0"&gt;· </span><span class="s4">${bpm}</span><span class="s1"> BPM&lt;/p&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                                </span>&lt;/div&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;div class="flex-shrink-0 flex items-center gap-2"&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                                 </span>&lt;button class="add-button flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center bg-blue-500 rounded-full hover:bg-blue-400 transition-transform duration-200 hover:scale-110"<span class="Apple-converted-space"> </span></span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                                    </span>data-track-name="</span><span class="s4">${encodeURIComponent(track.name)}</span><span class="s1">"</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                                    </span>data-artists="</span><span class="s4">${encodeURIComponent(artists)}</span><span class="s1">"</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                                    </span>data-song-url="</span><span class="s4">${encodeURIComponent(songUrl)}</span><span class="s1">"</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                                    </span>data-album-art-url="</span><span class="s4">${encodeURIComponent(albumArtUrl)}</span><span class="s1">"</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                                    </span>data-bpm="</span><span class="s4">${bpm}</span><span class="s1">"&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                                    </span>&lt;svg class="w-5 h-5 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                                      </span>&lt;path fill-rule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" clip-rule="evenodd" /&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                                    </span>&lt;/svg&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                                </span>&lt;/button&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                                </span>&lt;button class="play-button flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center bg-[#1DB954] rounded-full hover:bg-green-500 transition-transform duration-200 hover:scale-110" data-track-id="</span><span class="s4">${track.id}</span><span class="s1">"&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                                    </span>&lt;svg class="w-5 h-5 text-black" fill="currentColor" viewBox="0 0 20 20"&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                                        </span>&lt;path d="M4.018 15.592A.998.998 0 005 16h10a1 1 0 00.982-1.408L9.982 4.408A1 1 0 008.018 4.408L4.018 15.592z" transform="rotate(90 10 10)"&gt;&lt;/path&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                                    </span>&lt;/svg&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                                </span>&lt;/button&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;div id="player-container-</span><span class="s4">${track.id}</span><span class="s1">" class="player-container mt-2"&gt;&lt;/div&gt;</span></p>
-<p class="p8"><span class="s1"><span class="Apple-converted-space">                    </span>`</span><span class="s4">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>resultsContainer.appendChild(resultElement);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>});</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s1">/** Toggles the inline compact player. */</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s11">function</span><span class="s1"> toggleInlinePlayer(trackId) {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s11">const</span><span class="s1"> playerContainer = searchContainer.querySelector(</span><span class="s7">`#player-container-</span><span class="s1">${trackId}</span><span class="s7">`</span><span class="s1">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s11">const</span><span class="s1"> isOpen = playerContainer.classList.contains(</span><span class="s7">'is-open'</span><span class="s1">);</span></p>
-<p class="p7"><span class="s1"><span class="Apple-converted-space">                </span></span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>clearAllPlayers(trackId);</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s11">if</span><span class="s1"> (isOpen) {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>playerContainer.innerHTML = </span><span class="s7">''</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>playerContainer.classList.remove(</span><span class="s7">'is-open'</span><span class="s1">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>updatePlayButtonIcon(trackId, </span><span class="s11">true</span><span class="s1">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>} </span><span class="s11">else</span><span class="s1"> {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s11">const</span><span class="s1"> iframe = document.createElement(</span><span class="s7">'iframe'</span><span class="s1">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>iframe.style.borderRadius = </span><span class="s7">'12px'</span><span class="s1">;</span></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">                    </span>iframe.src = </span><span class="s1">`https://open.spotify.com/embed/track/</span><span class="s4">${trackId}</span><span class="s1">?utm_source=generator&amp;theme=0&amp;autoplay=1`</span><span class="s4">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>iframe.width = </span><span class="s7">'100%'</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>iframe.height = </span><span class="s7">'80'</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>iframe.frameBorder = </span><span class="s7">'0'</span><span class="s1">;</span></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">                    </span>iframe.allow = </span><span class="s1">'autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture'</span><span class="s4">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>iframe.loading = </span><span class="s7">'lazy'</span><span class="s1">;</span></p>
-<p class="p7"><span class="s1"><span class="Apple-converted-space">                    </span></span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>playerContainer.appendChild(iframe);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>playerContainer.classList.add(</span><span class="s7">'is-open'</span><span class="s1">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>updatePlayButtonIcon(trackId, </span><span class="s11">false</span><span class="s1">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>}</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s1">/** Clears all player containers except the one specified. */</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s11">function</span><span class="s1"> clearAllPlayers(exceptTrackId = </span><span class="s11">null</span><span class="s1">) {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>searchContainer.querySelectorAll(</span><span class="s7">'.player-container'</span><span class="s1">).forEach(container =&gt; {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s11">const</span><span class="s1"> containerId = container.id.replace(</span><span class="s7">'player-container-'</span><span class="s1">, </span><span class="s7">''</span><span class="s1">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s11">if</span><span class="s1"> (containerId !== exceptTrackId) {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span>container.innerHTML = </span><span class="s7">''</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span>container.classList.remove(</span><span class="s7">'is-open'</span><span class="s1">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span>updatePlayButtonIcon(containerId, </span><span class="s11">true</span><span class="s1">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>}</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>});</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s1">/** Updates the icon on the play button. */</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s11">function</span><span class="s1"> updatePlayButtonIcon(trackId, isPlayIcon) {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s11">const</span><span class="s1"> button = searchContainer.querySelector(</span><span class="s7">`.play-button[data-track-id="</span><span class="s1">${trackId}</span><span class="s7">"]`</span><span class="s1">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s11">if</span><span class="s1"> (!button) </span><span class="s11">return</span><span class="s1">;</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s11">const</span><span class="s4"> playIcon = </span><span class="s1">`&lt;svg class="w-5 h-5 text-black" fill="currentColor" viewBox="0 0 20 20"&gt;&lt;path d="M4.018 15.592A.998.998 0 005 16h10a1 1 0 00.982-1.408L9.982 4.408A1 1 0 008.018 4.408L4.018 15.592z" transform="rotate(90 10 10)"&gt;&lt;/path&gt;&lt;/svg&gt;`</span><span class="s4">;</span></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">                </span></span><span class="s11">const</span><span class="s4"> closeIcon = </span><span class="s1">`&lt;svg class="w-5 h-5 text-black" fill="currentColor" viewBox="0 0 20 20"&gt;&lt;path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"&gt;&lt;/path&gt;&lt;/svg&gt;`</span><span class="s4">;</span></p>
-<p class="p7"><span class="s1"><span class="Apple-converted-space">                </span></span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>button.innerHTML = isPlayIcon ? playIcon : closeIcon;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
-<p class="p7"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s1">/** Clears results and status messages. */</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s11">function</span><span class="s1"> clearResults(showInitial = </span><span class="s11">false</span><span class="s1">) {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>resultsContainer.innerHTML = </span><span class="s7">''</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>resultsContainer.appendChild(loader);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>resultsContainer.appendChild(noResultsMessage);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>resultsContainer.appendChild(initialMessage);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>loader.style.display = </span><span class="s7">'none'</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>noResultsMessage.style.display = </span><span class="s7">'none'</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>initialMessage.style.display = showInitial ? </span><span class="s7">'block'</span><span class="s1"> : </span><span class="s7">'none'</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s1">/** Get user info from URL parameters */</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s11">function</span><span class="s1"> getUserInfo() {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s11">const</span><span class="s1"> params = </span><span class="s11">new</span><span class="s1"> </span><span class="s13">URLSearchParams</span><span class="s1">(window.location.search);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s11">return</span><span class="s1"> {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>userID: params.</span><span class="s11">get</span><span class="s1">(</span><span class="s7">'userID'</span><span class="s1">),</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>userEmail: params.</span><span class="s11">get</span><span class="s1">(</span><span class="s7">'userEmail'</span><span class="s1">),</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>rowID: params.</span><span class="s11">get</span><span class="s1">(</span><span class="s7">'rowID'</span><span class="s1">)</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>};</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s1">// --- Event Listeners ---</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s11">function</span><span class="s1"> handleSearch() {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>clearTimeout(searchTimeout);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>searchTimeout = setTimeout(() =&gt; {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>searchSongs();</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>}, </span><span class="s12">300</span><span class="s1">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>searchInput.addEventListener(</span><span class="s7">'keyup'</span><span class="s1">, handleSearch);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>resultsCount.addEventListener(</span><span class="s7">'change'</span><span class="s1">, handleSearch);</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>resultsContainer.addEventListener(</span><span class="s7">'click'</span><span class="s1">, </span><span class="s11">async</span><span class="s1"> </span><span class="s11">function</span><span class="s1">(e) {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s11">const</span><span class="s1"> playButton = e.target.closest(</span><span class="s7">'.play-button'</span><span class="s1">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s11">const</span><span class="s1"> addButton = e.target.closest(</span><span class="s7">'.add-button'</span><span class="s1">);</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s11">if</span><span class="s1"> (playButton) {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s11">const</span><span class="s1"> trackId = playButton.dataset.trackId;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>toggleInlinePlayer(trackId);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>} </span><span class="s11">else</span><span class="s1"> </span><span class="s11">if</span><span class="s1"> (addButton) {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s11">if</span><span class="s1"> (addButton.disabled) </span><span class="s11">return</span><span class="s1">; </span><span class="s14">// Prevent multiple clicks</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s11">const</span><span class="s1"> userInfo = getUserInfo();</span></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">                    </span></span><span class="s11">const</span><span class="s4"> webhookUrl = </span><span class="s1">'https://go.glideapps.com/api/container/plugin/webhook-trigger/8MNYA21VKEtcJUen7n3V/5918826b-b49a-4872-9eaf-384b72fd789f'</span><span class="s4">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s11">const</span><span class="s1"> payload = {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s7">'Name'</span><span class="s1">: decodeURIComponent(addButton.dataset.trackName),</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s7">'Artist'</span><span class="s1">: decodeURIComponent(addButton.dataset.artists),</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s7">'URL'</span><span class="s1">: decodeURIComponent(addButton.dataset.songUrl),</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s7">'Album Art'</span><span class="s1">: decodeURIComponent(addButton.dataset.albumArtUrl),</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s7">'BPM'</span><span class="s1">: </span><span class="s13">Number</span><span class="s1">(addButton.dataset.bpm),</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s7">'UserID'</span><span class="s1">: userInfo.userID,</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s7">'UserEmail'</span><span class="s1">: userInfo.userEmail,</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s7">'RowID'</span><span class="s1">: userInfo.rowID</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>};</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s11">try</span><span class="s1"> {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s11">const</span><span class="s1"> response = </span><span class="s11">await</span><span class="s1"> fetch(webhookUrl, {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span>method: </span><span class="s7">'POST'</span><span class="s1">,</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span>headers: {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                                </span></span><span class="s7">'Content-Type'</span><span class="s1">: </span><span class="s7">'application/json'</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span>},</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span>body: </span><span class="s13">JSON</span><span class="s1">.stringify(payload)</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span>});</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s11">if</span><span class="s1"> (response.ok) {</span></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">                            </span></span><span class="s1">// Give visual feedback that the song was added</span></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">                            </span>addButton.innerHTML = </span><span class="s1">`&lt;svg class="w-5 h-5 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"&gt;&lt;path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /&gt;&lt;/svg&gt;`</span><span class="s4">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span>addButton.classList.remove(</span><span class="s7">'bg-blue-500'</span><span class="s1">, </span><span class="s7">'hover:bg-blue-400'</span><span class="s1">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span>addButton.classList.add(</span><span class="s7">'bg-green-500'</span><span class="s1">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span>addButton.disabled = </span><span class="s11">true</span><span class="s1">;</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span>} </span><span class="s11">else</span><span class="s1"> {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span>console.error(</span><span class="s7">'Webhook failed:'</span><span class="s1">, response.status, </span><span class="s11">await</span><span class="s1"> response.text());</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                            </span>alert(</span><span class="s7">`Failed to add song. Server responded with status </span><span class="s1">${response.status}</span><span class="s7">.`</span><span class="s1">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span>}</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>} </span><span class="s11">catch</span><span class="s1"> (error) {</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                        </span>console.error(</span><span class="s7">"Error sending webhook:"</span><span class="s1">, error);</span></p>
-<p class="p8"><span class="s4"><span class="Apple-converted-space">                        </span>alert(</span><span class="s1">"Could not send song data. Please check the console for errors."</span><span class="s4">);</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                    </span>}</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">                </span>}</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>});</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">            </span></span><span class="s1">// Initialize the component</span></p>
-<p class="p5"><span class="s1"><span class="Apple-converted-space">            </span>window.addEventListener(</span><span class="s7">'load'</span><span class="s1">, getAccessToken);</span></p>
-<p class="p6"><span class="s4"><span class="Apple-converted-space">        </span>})(); </span><span class="s1">// End of self-invoking function</span></p>
-<p class="p2"><span class="s4"><span class="Apple-converted-space">    </span></span><span class="s3">&lt;/</span><span class="s1">script</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s3">&lt;/</span><span class="s1">body</span><span class="s3">&gt;</span></p>
-<p class="p2"><span class="s3">&lt;/</span><span class="s1">html</span><span class="s3">&gt;</span></p>
-<p class="p7"><span class="s10"></span><br></p>
-</body>
-</html>
+<!-- Instructions for embedding:
+1. Copy and paste this ENTIRE block of code into your webpage's HTML where you want the component to appear.
+2. This snippet includes the necessary links to fonts and styles.
+3. The "Add" button functionality is now configured to send data to a specific webhook URL.
+-->
+
+<!-- Required Styles and Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+    /* Scoping styles to the component to avoid conflicts */
+    #spotify-search-container {
+        font-family: 'Inter', sans-serif;
+        background-color: #191414; /* Spotify Black */
+        color: #FFFFFF;
+    }
+    #spotify-search-container ::-webkit-scrollbar { width: 8px; }
+    #spotify-search-container ::-webkit-scrollbar-track { background: #282828; }
+    #spotify-search-container ::-webkit-scrollbar-thumb { background: #535353; border-radius: 10px; }
+    #spotify-search-container ::-webkit-scrollbar-thumb:hover { background: #737373; }
+    #spotify-search-container select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23FFFFFF%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-13%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2013l128%20127.9c3.6%203.6%207.8%205.4%2013%205.4s9.4-1.8%2013-5.4L287%2095.2c3.6-3.7%205.4-8%205.4-13%200-4.9-1.8-9.2-5.4-12.8z%22%2F%3E%3C%2Fsvg%3E');
+        background-repeat: no-repeat;
+        background-position: right 0.7rem center;
+        background-size: 0.65rem auto;
+    }
+    #spotify-search-container .player-container {
+        transition: max-height 0.5s ease-in-out;
+        max-height: 0;
+        overflow: hidden;
+    }
+    #spotify-search-container .player-container.is-open {
+        max-height: 100px; /* Enough height for the compact player */
+    }
+</style>
+
+<!-- Main Component HTML -->
+<div id="spotify-search-container" class="w-full max-w-3xl mx-auto bg-[#282828] rounded-2xl shadow-2xl shadow-black/30 overflow-hidden">
+    <div class="p-4 sm:p-6 md:p-8">
+        <!-- Spotify Logo -->
+        <svg role="img" class="h-8 w-8 sm:h-10 sm:w-10 mx-auto mb-4 text-white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Spotify</title><path fill="#1DB954" d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm6.825 17.54c-.23.36-.69.48-1.05.25-2.7-1.66-6.25-2.05-10.4-1.15-.42.1-.84-.13-1.04-.54-.2-.41.13-.84.54-1.04 4.5-1 8.35-.55 11.35 1.35.36.22.48.69.25 1.05zm1.2-2.7c-.28.45-.88.6-1.33.32-3.15-1.95-7.6-2.5-12.25-1.35-.53.15-1.08-.18-1.23-.7-.15-.53.18-1.08.7-1.23C14.35 9.9 19.2 10.5 22.75 12.7c.45.28.6.88.32 1.33zm.1-3.2c-3.75-2.15-9.8-2.4-14.4-1.25-.6.15-1.2-.2-1.35-.8-.15-.6.2-1.2.8-1.35C11.25 4.9 17.9 5.2 22.1 7.6c.55.3.7 1 .4 1.55-.3.55-1 .7-1.55.4z"/></svg>
+        
+        <h1 class="text-xl sm:text-2xl md:text-3xl font-bold text-center text-white mb-6">
+            Song Search
+        </h1>
+
+        <!-- Search Controls -->
+        <div class="flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
+            <div class="relative flex-grow w-full">
+                <input type="text" id="searchInput" placeholder="Enter a song name..." class="w-full text-sm sm:text-base pl-10 sm:pl-12 pr-4 py-3 bg-[#333333] border-2 border-[#535353] rounded-xl focus:ring-2 focus:ring-[#1DB954] focus:border-[#1DB954] focus:outline-none transition duration-300 placeholder-gray-400">
+                <svg class="absolute left-3 sm:left-4 top-1/2 -translate-y-1/2 w-5 h-5 sm:w-6 sm:h-6 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+            </div>
+            <div class="flex-shrink-0 w-full sm:w-auto">
+                <select id="resultsCount" class="w-full h-full text-sm sm:text-base px-4 py-3 bg-[#333333] border-2 border-[#535353] rounded-xl focus:ring-2 focus:ring-[#1DB954] focus:border-[#1DB954] focus:outline-none transition duration-300">
+                    <option value="5">5 Results</option>
+                    <option value="10" selected>10 Results</option>
+                    <option value="15">15 Results</option>
+                    <option value="20">20 Results</option>
+                    <option value="25">25 Results</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <!-- Results Container -->
+    <div id="results" class="px-2 pb-4">
+        <div id="loader" class="hidden justify-center items-center p-8"><div class="animate-spin rounded-full h-12 w-12 border-b-2 border-[#1DB954]"></div></div>
+        <div id="no-results" class="hidden text-center p-8 text-gray-400"><p>No results found. Try another search.</p></div>
+        <div id="initial-message" class="text-center p-8 text-gray-400"><p>Your search results will appear here.</p></div>
+    </div>
+</div>
+
+<!-- Main Component Script -->
+<script>
+    // Self-invoking function to encapsulate the script and avoid global scope conflicts
+    (function() {
+        // --- Spotify API Credentials ---
+        const clientId = '65b6fcd844db4cb2804723a8f4379eb7';
+        const clientSecret = 'ee49545485ba402f87166553e242da14';
+        let accessToken = null;
+        let tokenExpirationTime = 0;
+
+        // --- DOM Elements ---
+        const searchContainer = document.getElementById('spotify-search-container');
+        const searchInput = searchContainer.querySelector('#searchInput');
+        const resultsCount = searchContainer.querySelector('#resultsCount');
+        const resultsContainer = searchContainer.querySelector('#results');
+        const loader = searchContainer.querySelector('#loader');
+        const noResultsMessage = searchContainer.querySelector('#no-results');
+        const initialMessage = searchContainer.querySelector('#initial-message');
+
+        let searchTimeout;
+
+        /** Fetches a new access token from the Spotify API. */
+        async function getAccessToken() {
+            if (accessToken && Date.now() < tokenExpirationTime) return accessToken;
+            try {
+                const response = await fetch('https://accounts.spotify.com/api/token', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                        'Authorization': 'Basic ' + btoa(clientId + ':' + clientSecret)
+                    },
+                    body: 'grant_type=client_credentials'
+                });
+                if (!response.ok) throw new Error(`Token fetch failed: ${response.statusText}`);
+                const data = await response.json();
+                accessToken = data.access_token;
+                tokenExpirationTime = Date.now() + (data.expires_in - 60) * 1000;
+                return accessToken;
+            } catch (error) {
+                console.error("Error fetching Spotify access token:", error);
+                resultsContainer.innerHTML = `<p class="text-center text-red-400 p-4">Could not connect to Spotify.</p>`;
+                return null;
+            }
+        }
+
+        /** Searches for tracks and their audio features on Spotify. */
+        async function searchSongs() {
+            const query = searchInput.value;
+            if (!query.trim()) {
+                clearResults(true);
+                return;
+            }
+            clearResults();
+            loader.style.display = 'flex';
+
+            const token = await getAccessToken();
+            if (!token) {
+                loader.style.display = 'none';
+                return;
+            }
+
+            try {
+                // Step 1: Search for tracks
+                const limit = resultsCount.value;
+                const searchUrl = `https://api.spotify.com/v1/search?q=${encodeURIComponent(query)}&type=track&limit=${limit}`;
+                const searchResponse = await fetch(searchUrl, { headers: { 'Authorization': `Bearer ${token}` } });
+                
+                if (searchResponse.status === 401) {
+                    accessToken = null;
+                    console.log("Token expired on search, retrying...");
+                    searchSongs(); // Retry the whole function
+                    return;
+                }
+                if (!searchResponse.ok) throw new Error(`Search API error: ${searchResponse.statusText}`);
+                
+                const searchData = await searchResponse.json();
+                const tracks = searchData.tracks.items;
+
+                if (!tracks || tracks.length === 0) {
+                    displayResults([]);
+                    return;
+                }
+
+                // Step 2: Get audio features (BPM)
+                let combinedData;
+                try {
+                    const trackIds = tracks.map(track => track && track.id).filter(Boolean).join(',');
+                    if (trackIds) {
+                        const featuresUrl = `https://api.spotify.com/v1/audio-features?ids=${trackIds}`;
+                        const featuresResponse = await fetch(featuresUrl, { headers: { 'Authorization': `Bearer ${token}` } });
+                        if (featuresResponse.status === 401) {
+                            accessToken = null;
+                            console.log("Token expired on features fetch, retrying...");
+                            searchSongs();
+                            return;
+                        }
+                        if (!featuresResponse.ok) {
+                            throw new Error(`Features API error: Status ${featuresResponse.status}`);
+                        }
+                        const featuresData = await featuresResponse.json();
+                        const audioFeaturesMap = new Map(featuresData.audio_features.map(f => f && [f.id, f]).filter(Boolean));
+                        combinedData = tracks.map(track => ({
+                            ...track,
+                            bpm: (audioFeaturesMap.get(track.id)?.tempo || 0)
+                        }));
+                    } else {
+                        // If no track IDs, just set bpm to 0
+                        combinedData = tracks.map(t => ({...t, bpm: 0}));
+                    }
+                } catch (featuresError) {
+                    // If fetching features fails for any reason (like 403), log it and proceed without BPM
+                    console.warn("Could not fetch audio features:", featuresError.message);
+                    console.warn("Displaying results without BPM data.");
+                    combinedData = tracks.map(t => ({...t, bpm: 0}));
+                }
+
+                displayResults(combinedData);
+
+            } catch (error) {
+                console.error("Error during Spotify search:", error);
+                loader.style.display = 'none';
+                resultsContainer.innerHTML = `<p class="text-center text-red-400 p-4">An error occurred. Please try again.</p>`;
+            }
+        }
+
+        /** Renders the search results in the DOM. */
+        function displayResults(tracks) {
+            clearResults();
+
+            if (!tracks || tracks.length === 0) {
+                noResultsMessage.style.display = 'block';
+                return;
+            }
+            
+            tracks.sort((a, b) => b.popularity - a.popularity);
+
+            tracks.forEach(track => {
+                const artists = track.artists.map(artist => artist.name).join(', ');
+                const albumArtUrl = track.album.images.length ? track.album.images[0].url : 'https://placehold.co/48x48/282828/737373?text=N/A';
+                const songUrl = track.external_urls.spotify;
+                const bpm = Math.round(track.bpm);
+
+                const resultElement = document.createElement('div');
+                resultElement.className = 'result-item p-3 mx-2 mb-2 bg-[#333333]/60 rounded-lg transition-all duration-300';
+                resultElement.innerHTML = `
+                    <div class="flex items-center gap-4">
+                        <img src="${albumArtUrl}" class="w-10 h-10 sm:w-12 sm:h-12 rounded-md flex-shrink-0" alt="${track.album.name}" onerror="this.src='https://placehold.co/48x48/282828/737373?text=N/A'">
+                        <div class="min-w-0 flex-grow">
+                            <p class="font-bold truncate text-sm sm:text-base text-white">${track.name}</p>
+                            <div class="flex items-center gap-x-2">
+                                <p class="text-xs sm:text-sm text-gray-400 truncate">${artists}</p>
+                                <p class="text-xs sm:text-sm text-gray-400 flex-shrink-0">· ${bpm} BPM</p>
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0 flex items-center gap-2">
+                             <button class="add-button flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center bg-blue-500 rounded-full hover:bg-blue-400 transition-transform duration-200 hover:scale-110" 
+                                data-track-name="${encodeURIComponent(track.name)}"
+                                data-artists="${encodeURIComponent(artists)}"
+                                data-song-url="${encodeURIComponent(songUrl)}"
+                                data-album-art-url="${encodeURIComponent(albumArtUrl)}"
+                                data-bpm="${bpm}">
+                                <svg class="w-5 h-5 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                  <path fill-rule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" clip-rule="evenodd" />
+                                </svg>
+                            </button>
+                            <button class="play-button flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center bg-[#1DB954] rounded-full hover:bg-green-500 transition-transform duration-200 hover:scale-110" data-track-id="${track.id}">
+                                <svg class="w-5 h-5 text-black" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M4.018 15.592A.998.998 0 005 16h10a1 1 0 00.982-1.408L9.982 4.408A1 1 0 008.018 4.408L4.018 15.592z" transform="rotate(90 10 10)"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div id="player-container-${track.id}" class="player-container mt-2"></div>
+                `;
+                resultsContainer.appendChild(resultElement);
+            });
+        }
+
+        /** Toggles the inline compact player. */
+        function toggleInlinePlayer(trackId) {
+            const playerContainer = searchContainer.querySelector(`#player-container-${trackId}`);
+            const isOpen = playerContainer.classList.contains('is-open');
+            
+            clearAllPlayers(trackId);
+
+            if (isOpen) {
+                playerContainer.innerHTML = '';
+                playerContainer.classList.remove('is-open');
+                updatePlayButtonIcon(trackId, true);
+            } else {
+                const iframe = document.createElement('iframe');
+                iframe.style.borderRadius = '12px';
+                iframe.src = `https://open.spotify.com/embed/track/${trackId}?utm_source=generator&theme=0&autoplay=1`;
+                iframe.width = '100%';
+                iframe.height = '80';
+                iframe.frameBorder = '0';
+                iframe.allow = 'autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture';
+                iframe.loading = 'lazy';
+                
+                playerContainer.appendChild(iframe);
+                playerContainer.classList.add('is-open');
+                updatePlayButtonIcon(trackId, false);
+            }
+        }
+
+        /** Clears all player containers except the one specified. */
+        function clearAllPlayers(exceptTrackId = null) {
+            searchContainer.querySelectorAll('.player-container').forEach(container => {
+                const containerId = container.id.replace('player-container-', '');
+                if (containerId !== exceptTrackId) {
+                    container.innerHTML = '';
+                    container.classList.remove('is-open');
+                    updatePlayButtonIcon(containerId, true);
+                }
+            });
+        }
+
+        /** Updates the icon on the play button. */
+        function updatePlayButtonIcon(trackId, isPlayIcon) {
+            const button = searchContainer.querySelector(`.play-button[data-track-id="${trackId}"]`);
+            if (!button) return;
+
+            const playIcon = `<svg class="w-5 h-5 text-black" fill="currentColor" viewBox="0 0 20 20"><path d="M4.018 15.592A.998.998 0 005 16h10a1 1 0 00.982-1.408L9.982 4.408A1 1 0 008.018 4.408L4.018 15.592z" transform="rotate(90 10 10)"></path></svg>`;
+            const closeIcon = `<svg class="w-5 h-5 text-black" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>`;
+            
+            button.innerHTML = isPlayIcon ? playIcon : closeIcon;
+        }
+        
+        /** Clears results and status messages. */
+        function clearResults(showInitial = false) {
+            resultsContainer.innerHTML = '';
+            resultsContainer.appendChild(loader);
+            resultsContainer.appendChild(noResultsMessage);
+            resultsContainer.appendChild(initialMessage);
+            loader.style.display = 'none';
+            noResultsMessage.style.display = 'none';
+            initialMessage.style.display = showInitial ? 'block' : 'none';
+        }
+
+        /** Get user info from URL parameters */
+        function getUserInfo() {
+            const params = new URLSearchParams(window.location.search);
+            return {
+                userID: params.get('userID'),
+                userEmail: params.get('userEmail'),
+                rowID: params.get('rowID')
+            };
+        }
+
+        // --- Event Listeners ---
+        function handleSearch() {
+            clearTimeout(searchTimeout);
+            searchTimeout = setTimeout(() => {
+                searchSongs();
+            }, 300);
+        }
+
+        searchInput.addEventListener('keyup', handleSearch);
+        resultsCount.addEventListener('change', handleSearch);
+
+        resultsContainer.addEventListener('click', async function(e) {
+            const playButton = e.target.closest('.play-button');
+            const addButton = e.target.closest('.add-button');
+
+            if (playButton) {
+                const trackId = playButton.dataset.trackId;
+                toggleInlinePlayer(trackId);
+            } else if (addButton) {
+                if (addButton.disabled) return; // Prevent multiple clicks
+
+                const userInfo = getUserInfo();
+                const webhookUrl = 'https://go.glideapps.com/api/container/plugin/webhook-trigger/8MNYA21VKEtcJUen7n3V/5918826b-b49a-4872-9eaf-384b72fd789f';
+                const payload = {
+                    'Name': decodeURIComponent(addButton.dataset.trackName),
+                    'Artist': decodeURIComponent(addButton.dataset.artists),
+                    'URL': decodeURIComponent(addButton.dataset.songUrl),
+                    'Album Art': decodeURIComponent(addButton.dataset.albumArtUrl),
+                    'BPM': Number(addButton.dataset.bpm),
+                    'UserID': userInfo.userID,
+                    'UserEmail': userInfo.userEmail,
+                    'RowID': userInfo.rowID
+                };
+
+                try {
+                    const response = await fetch(webhookUrl, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(payload)
+                    });
+
+                    if (response.ok) {
+                        // Give visual feedback that the song was added
+                        addButton.innerHTML = `<svg class="w-5 h-5 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>`;
+                        addButton.classList.remove('bg-blue-500', 'hover:bg-blue-400');
+                        addButton.classList.add('bg-green-500');
+                        addButton.disabled = true;
+                    } else {
+                        console.error('Webhook failed:', response.status, await response.text());
+                        alert(`Failed to add song. Server responded with status ${response.status}.`);
+                    }
+                } catch (error) {
+                    console.error("Error sending webhook:", error);
+                    alert("Could not send song data. Please check the console for errors.");
+                }
+            }
+        });
+
+        // Initialize the component
+        window.addEventListener('load', getAccessToken);
+    })(); // End of self-invoking function
+</script>
